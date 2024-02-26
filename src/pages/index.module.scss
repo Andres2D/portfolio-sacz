@@ -1,0 +1,17 @@
+.container {
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .section {
+    // border: 2px solid white;
+    width: 50%;
+  }
+
+  .right {
+    // background-color: white;
+    color: black;
+  }
+}
+
