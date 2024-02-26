@@ -1,43 +1,48 @@
+@import '../../styles/sizes';
+
 .header {
-  max-height: 100vh;
-  max-width: 50%;
+  max-height: $fullHeight;
+  max-width: $headerWidth;
   color: white;
   position: sticky;
-  top: 5px;
+  top: $small;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  justify-content: space-around;
+  padding: $medium;
+  font-family: "Oxygen";
+  margin-left: $big;
 
   .title {
-    margin-bottom: 5px;
+    margin-bottom: $small;
+    font-size: $tall;
+    font-weight: bold;
   }
 
   .subtitle {
     margin-top: 0;
+    font-size: $average;
+    font-weight: lighter;
   }
 
   .links {
     display: flex;
     flex-direction: column;
     color: white;
-    text-decoration: none;
-    a:link {
-      color: white;
-    }
-
-    /* visited link */
-    a:visited {
-      color: white;
-    }
-
-    /* mouse over link */
-    a:hover {
-      color: white;
-    }
-
-    /* selected link */
-    a:active {
-      color: white;
+    justify-content: space-between;
+    height: $total;
+    font-size: $medium;
+    margin-left: $medium;
+    
+    .link {
+      &:before {
+        content: ' \279C   ';
+      }
+      
+      &:hover {
+        transition: all $transitionTime;
+        margin-left: $medium;
+      }
     }
   }
 
@@ -45,25 +50,5 @@
     display: flex;
     justify-content: space-evenly;
     color: white;
-    text-decoration: none;
-    text-decoration: none;
-    a:link {
-      color: white;
-    }
-
-    /* visited link */
-    a:visited {
-      color: white;
-    }
-
-    /* mouse over link */
-    a:hover {
-      color: white;
-    }
-
-    /* selected link */
-    a:active {
-      color: white;
-    }
   }
 }
