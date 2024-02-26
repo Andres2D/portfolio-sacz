@@ -1,0 +1,1 @@
+export { contactLinks, sectionsList } from './header';
