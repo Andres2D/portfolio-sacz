@@ -35,6 +35,8 @@
     margin-left: $medium;
     
     .link {
+      max-width: 200px;
+
       &:before {
         content: ' \279C   ';
       }
@@ -50,5 +52,10 @@
     display: flex;
     justify-content: space-evenly;
     color: white;
+
+    .icon {
+      width: $average;
+      cursor: pointer;
+    }
   }
 }
