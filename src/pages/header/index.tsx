@@ -4,7 +4,7 @@ import {contactLinks, sectionsList} from '../../constants';
 
 const HeaderComponent: React.FC = () => {
 
-  const linksMap = sectionsList.map(section => <a className={styles.link} href="#">{section}</a>);
+  const linksMap = sectionsList.map(section => <a className={styles.link} href="#about">{section}</a>);
   const contactMap = contactLinks.map(contact => 
     <img 
       className={styles.icon}
@@ -19,9 +19,7 @@ const HeaderComponent: React.FC = () => {
       <div>
         <h1 className={styles.title}>Sebastian Alcaraz</h1>
         <h3 className={styles.subtitle}>Digital Marketing specialist</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam tempora ipsa quae. Eaque optio hic suscipit animi autem eum. Placeat aliquam obcaecati eius dolorum rerum iure possimus vitae impedit?
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus blanditiis modi repellendus explicabo officia impedit quidem eligendi, nihil excepturi vel, sit, nemo aspernatur! Fuga vel incidunt facilis qui autem nobis.
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam tempora ipsa quae. Eaque optio hic suscipit animi autem eum. Placeat aliquam obcaecati eius dolorum rerum iure possimus vitae impedit?        </p>
       </div>
       
       <div className={styles.links}>

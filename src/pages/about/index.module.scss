@@ -1,0 +1,11 @@
+@import '../../styles//sizes';
+
+.section {
+  font-family: 'Oxygen';
+  color: white;
+  margin-top: $medium;
+
+  .title {
+    text-align: center;
+  }
+}

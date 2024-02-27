@@ -1,7 +1,15 @@
 @import './src/styles/colors';
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: $imperial;
   padding: 0;
   margin: 0;
+}
+
+p {
+  line-height: 25px;
 }

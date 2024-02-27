@@ -1,3 +1,5 @@
+@import '../styles/sizes';
+
 .container {
 
   display: flex;
@@ -6,6 +8,7 @@
 
   .section {
     width: 50%;
+    padding: $middle;
   }
 
   .right {
