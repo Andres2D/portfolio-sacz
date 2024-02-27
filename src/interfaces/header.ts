@@ -3,3 +3,8 @@ export interface Contact {
   url: string;
   image: string;
 }
+
+export interface SectionLink {
+  label: string;
+  reference: string;
+}

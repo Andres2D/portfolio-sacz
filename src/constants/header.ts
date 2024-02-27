@@ -1,4 +1,4 @@
-import { Contact } from '../interfaces/header';
+import { Contact, SectionLink } from '../interfaces/header';
 import {
   facebook,
   gmail,
@@ -8,10 +8,19 @@ import {
   whatsapp
 } from '../images/svg';
 
-export const sectionsList: string[] = [
-  'About',
-  'Experience',
-  'Projects'
+export const sectionsList: SectionLink[] = [
+  {
+    label: 'About',
+    reference: 'about'
+  },
+  {
+    label: 'Experience',
+    reference: 'experience'
+  },
+  {
+    label: 'Projects',
+    reference: 'projects'
+  }
 ];
 
 export const contactLinks: Contact[] = [

@@ -1,0 +1,62 @@
+@import '../../../styles/colors';
+@import '../../../styles/others';
+@import '../../../styles/sizes';
+
+.outer {
+  background: $nobel;     
+  opacity: $regularOpacity;
+  padding: $regular;
+  border-radius: $defaultBorder $defaultBorder 0 0;
+
+  &:hover {
+    .red{
+      background: $persimmon;
+    }
+
+    .amber {
+      background: $sunglow;
+    }
+  
+    .green {
+      background: $forestGreen;
+    }
+  }
+
+  .dot {
+    background: $riverBed;
+    display: inline-block;
+    width: $regular;
+    height: $regular;
+    background: $alabaster;
+    border-radius: $half;
+    margin: 0 $small 0 0;
+    transition: all $transitionTime;
+  }
+}
+
+.card {
+  padding: 0 $medium;
+  border: $tiny solid $nobel;
+  border-radius: 0 0 $defaultBorder $defaultBorder;
+  padding-bottom: $medium;
+  cursor: pointer;
+  transition: all $transitionTime;
+  margin-bottom: $middle;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .skills {
+    display: flex;
+
+    .tag {
+      border: $tiny solid $alabaster;
+      color: $alabaster;
+      margin: 0 $small;
+      padding: $small;
+      border-radius: $regular;
+    }
+  }
+}

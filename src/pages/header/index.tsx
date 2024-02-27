@@ -4,7 +4,9 @@ import {contactLinks, sectionsList} from '../../constants';
 
 const HeaderComponent: React.FC = () => {
 
-  const linksMap = sectionsList.map(section => <a className={styles.link} href="#about">{section}</a>);
+  const linksMap = sectionsList.map(section => 
+    <a className={styles.link} href={`#${section.reference}`}>{section.label}</a>
+  );
   const contactMap = contactLinks.map(contact => 
     <img 
       className={styles.icon}
