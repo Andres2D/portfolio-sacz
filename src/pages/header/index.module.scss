@@ -1,5 +1,6 @@
 @import '../../styles/sizes';
 @import '../../styles/others';
+@import '../../styles/breakpoints';
 
 .header {
   max-height: $fullHeight;
@@ -13,6 +14,7 @@
   padding: $medium;
   font-family: "Oxygen";
   margin-left: $big;
+  max-height: $maxHeight;
 
   .title {
     margin-bottom: $small;
@@ -36,7 +38,7 @@
     margin-left: $medium;
     
     .link {
-      max-width: 200px;
+      max-width: $maxWidth;
 
       &:before {
         content: ' \279C   ';
@@ -58,5 +60,23 @@
       width: $average;
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: $mediumScreen) {
+  .header {
+    position: relative;
+    max-width: unset;
+    width: $regularPercentage;
+    height: $fullHeight;
+    margin: 0 auto;
+  } 
+}
+
+@media (max-width: $smallScreen) {
+  .header {
+    padding-top: 0;
+    text-align: justify;
+    width: $most;
   }
 }

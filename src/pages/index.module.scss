@@ -1,13 +1,15 @@
 @import '../styles/sizes';
+@import '../styles/breakpoints';
 
 .container {
-
   display: flex;
   justify-content: space-between;
   position: relative;
+  max-width: $bigScreen;
+  margin: 0 auto;
 
   .section {
-    width: 50%;
+    width: $half;
     padding: $middle;
   }
 
@@ -16,3 +18,23 @@
   }
 }
 
+@media (max-width: $mediumScreen) {
+  .container {
+    flex-direction: column;
+
+    .section {
+      width: $most;
+      padding: $small;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: $extraSmallScreen) {
+  .container {
+    .section {
+      width: $most;
+      padding: $small;
+    }
+  }
+}
