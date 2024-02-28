@@ -1,6 +1,7 @@
 @import '../../../styles/colors';
 @import '../../../styles/others';
 @import '../../../styles/sizes';
+@import '../../../styles/breakpoints';
 
 .outer {
   background: $nobel;     
@@ -50,6 +51,7 @@
 
   .skills {
     display: flex;
+    flex-wrap: wrap;
 
     .tag {
       border: $tiny solid $alabaster;
@@ -58,5 +60,11 @@
       padding: $small;
       border-radius: $regular;
     }
+  }
+}
+
+@media (max-width: $mediumScreen) {
+  .card {
+    text-align: justify;
   }
 }
