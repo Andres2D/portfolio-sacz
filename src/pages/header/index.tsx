@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as styles from './index.module.scss';
 import {contactLinks, sectionsList} from '../../constants';
+import { Contact } from '../../interfaces/header';
 
 const HeaderComponent: React.FC = () => {
 
@@ -12,8 +13,18 @@ const HeaderComponent: React.FC = () => {
       className={styles.icon}
       src={contact.image}
       alt={contact.label}
+      onClick={() => redirect(contact)}
     />
   );
+
+  const redirect = ({isGmail, url}: Contact) => {
+    if(isGmail) {
+      const email = `mailto:${url}?subject=files&body=Hi Sebastian, I just checked your web page.`;
+      window.location.href = email;
+    }else {
+      window.open(url, '_blank');
+    }
+  };
 
   return (
     <header className={`${styles.header}`}>
