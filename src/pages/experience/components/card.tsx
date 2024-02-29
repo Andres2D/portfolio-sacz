@@ -8,6 +8,12 @@ type Props = {
 
 const CardComponent: React.FC<Props> = ({experience}) => {
 
+  if(!experience) {
+    return (
+      <p>Card error!</p>
+    );
+  }
+
   const { 
     jobTitle,
     initialDate,
