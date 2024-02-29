@@ -1,0 +1,18 @@
+@import '../../styles/sizes';
+
+.container { 
+  font-family: 'Oxygen';
+  color: white;
+
+  .title {
+    text-align: center;
+    margin-bottom: $middle;
+  }
+
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $middle;
+  }
+}

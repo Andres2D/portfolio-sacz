@@ -6,7 +6,7 @@ import {
   linkedin,
   twitter,
   whatsapp
-} from '../images/svg';
+} from '../images';
 
 export const sectionsList: SectionLink[] = [
   {
@@ -16,6 +16,10 @@ export const sectionsList: SectionLink[] = [
   {
     label: 'Experience',
     reference: 'experience'
+  },
+  {
+    label: 'Work',
+    reference: 'work'
   },
   {
     label: 'Projects',

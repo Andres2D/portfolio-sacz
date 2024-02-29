@@ -1,0 +1,90 @@
+@import '../../../styles/sizes';
+@import '../../../styles/colors';
+@import '../../../styles/others';
+
+.card {
+  position: relative;
+  width: $imageWidth;
+  height: $imageHeight;
+  background: white;
+  margin: 0 auto;
+  border-radius: $small;
+  box-shadow: 0 $tiny $regular $deepBlack;
+  cursor: pointer;
+
+  &:before, 
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $full;
+    height: $full;
+    border-radius: $small;
+    background: white;
+    transition: $transitionTime;
+    z-index: -1;
+  }
+
+  &:hover {
+    &::before {
+      transform: rotate($highRotation);
+      box-shadow: 0 $tiny $medium $deepBlack;
+    }
+    
+    &::after {
+      transform: rotate($defaultRotation);
+      box-shadow: 0 $tiny $medium $deepBlack;
+    }
+
+    .image {
+      bottom: $big;
+    }
+  }
+
+  .image {
+    position: absolute;
+    top: $regular;
+    left: $regular;
+    bottom: $regular;
+    right: $regular;
+    background: $imperial;
+    transition: $transitionTime;
+    z-index: 1;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $full;
+      height: $full;
+      object-fit: cover;
+    }
+  }
+  
+  .details {
+    position: absolute;
+    left: $regular;
+    right: $regular;
+    bottom: $regular;
+    height: $middle;
+    text-align: center;
+
+    .title {
+      margin: 0;
+      padding: 0;
+      font-weight: $bigFont;
+      font-size: $medium;
+      color: $imperial;
+      text-transform: uppercase;
+    }
+
+    .span {
+      font-weight: $tallFont;
+      font-size: $medium;
+      color: $persimmon;
+      display: block;
+      margin-top: $small;
+    }
+  }
+}

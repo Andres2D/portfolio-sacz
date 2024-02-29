@@ -4,6 +4,7 @@ import * as styles from './index.module.scss';
 import HeaderComponent from "./header";
 import AboutComponent from './about/index';
 import ExperienceComponent from "./experience";
+import WorkComponent from "./work";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -14,8 +15,12 @@ const IndexPage: React.FC<PageProps> = () => {
         <br />
         <br /><br /><br /><br /><br /><br /><br /><br />
         <ExperienceComponent />
+        <br />
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <WorkComponent />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
       </main>
     </div>
   );
