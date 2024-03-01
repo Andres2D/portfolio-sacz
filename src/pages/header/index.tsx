@@ -33,10 +33,7 @@ const HeaderComponent: React.FC = () => {
       <div>
         <h1 className={styles.title}>{profile.name}</h1>
         <h3 className={styles.subtitle}>{profile.role}</h3>
-        {
-          (profile.description && profile.description.trim()) !== '' ??
-          <p>{profile.description}</p>
-        }
+        <p>{profile.description}</p>
       </div>
       
       <div className={styles.links}>

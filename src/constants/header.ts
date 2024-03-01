@@ -55,5 +55,6 @@ export const contactLinks: Contact[] = [
 export const profile: Profile = {
   name: 'Sebastian Alcaraz',
   role: 'Digital Marketing specialist',
-  description: ''
+  description: `Business Marketing
+  Humber College Institute of Technology & Advanced Learning • Toronto`
 }
