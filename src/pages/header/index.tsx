@@ -3,6 +3,7 @@ import * as styles from './index.module.scss';
 import {contactLinks, sectionsList} from '../../constants';
 import { Contact } from '../../interfaces/header';
 import { profile } from '../../constants/header';
+import { resume } from "../../files";
 
 const HeaderComponent: React.FC = () => {
 
@@ -34,6 +35,7 @@ const HeaderComponent: React.FC = () => {
         <h1 className={styles.title}>{profile.name}</h1>
         <h3 className={styles.subtitle}>{profile.role}</h3>
         <p>{profile.description}</p>
+        <a href={resume} target="_blank" className={styles.download}>Download resume</a>
       </div>
       
       <div className={styles.links}>

@@ -29,6 +29,12 @@
     font-weight: lighter;
   }
 
+  .download {
+    text-decoration: underline;
+    color: $level3;
+    cursor: pointer;
+  }
+
   .links {
     display: flex;
     flex-direction: column;
