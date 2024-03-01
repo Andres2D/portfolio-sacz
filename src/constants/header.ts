@@ -1,4 +1,4 @@
-import { Contact, SectionLink } from '../interfaces/header';
+import { Contact, Profile, SectionLink } from '../interfaces/header';
 import {
   facebook,
   gmail,
@@ -51,3 +51,9 @@ export const contactLinks: Contact[] = [
     isGmail: true
   },
 ];
+
+export const profile: Profile = {
+  name: 'Sebastian Alcaraz',
+  role: 'Digital Marketing specialist',
+  description: ''
+}
