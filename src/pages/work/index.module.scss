@@ -3,6 +3,7 @@
 .container { 
   font-family: 'Oxygen';
   color: white;
+  min-height: $fullHeight;
 
   .title {
     text-align: center;

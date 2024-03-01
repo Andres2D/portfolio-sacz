@@ -1,6 +1,9 @@
+@import '../../styles/sizes';
+
 .section {
   color: white;
   font-family: 'Oxygen';
+  min-height: $fullHeight;
 
   .title {
     text-align: center;

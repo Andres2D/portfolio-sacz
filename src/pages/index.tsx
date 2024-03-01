@@ -12,15 +12,8 @@ const IndexPage: React.FC<PageProps> = () => {
       <HeaderComponent />
       <main className={styles.section}>
         <AboutComponent />
-        <br />
-        <br /><br /><br /><br /><br /><br /><br /><br />
         <ExperienceComponent />
-        <br />
-        <br /><br /><br /><br /><br /><br /><br /><br />
         <WorkComponent />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
       </main>
     </div>
   );
