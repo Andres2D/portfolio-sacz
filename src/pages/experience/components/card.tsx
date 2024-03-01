@@ -25,23 +25,16 @@ const CardComponent: React.FC<Props> = ({experience}) => {
   const tagsMap = tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>);
 
   return (
-    <>
-      <div className={styles.outer}>
-        <div className={`${styles.dot} ${styles.red}`}></div>
-        <div className={`${styles.dot} ${styles.amber}`}></div>
-        <div className={`${styles.dot} ${styles.green}`}></div>
+    <div className={styles.card}>
+      <header className={styles.cardHeader}>
+        <h2 className={styles.title}>{jobTitle}</h2>
+        <h4 className={styles.date}>{initialDate} - {finalDate ?? 'Present'}</h4>
+      </header>
+      <p className={styles.description}>{description}</p>
+      <div className={styles.skills}>
+        {tagsMap}
       </div>
-      <div className={styles.card}>
-        <header className={styles.cardHeader}>
-          <h2 className={styles.title}>{jobTitle}</h2>
-          <h4 className={styles.date}>{initialDate} - {finalDate ?? 'Present'}</h4>
-        </header>
-        <p className={styles.description}>{description}</p>
-        <div className={styles.skills}>
-          {tagsMap}
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
 export default CardComponent;
