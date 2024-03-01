@@ -20,10 +20,6 @@ export const sectionsList: SectionLink[] = [
   {
     label: 'Work',
     reference: 'work'
-  },
-  {
-    label: 'Projects',
-    reference: 'projects'
   }
 ];
 
