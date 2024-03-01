@@ -9,3 +9,9 @@ export interface SectionLink {
   label: string;
   reference: string;
 }
+
+export interface Profile {
+  name: string;
+  role: string;
+  description: string;
+}

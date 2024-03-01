@@ -1,4 +1,4 @@
-import { Contact, SectionLink } from '../interfaces/header';
+import { Contact, Profile, SectionLink } from '../interfaces/header';
 import {
   facebook,
   gmail,
@@ -20,10 +20,6 @@ export const sectionsList: SectionLink[] = [
   {
     label: 'Work',
     reference: 'work'
-  },
-  {
-    label: 'Projects',
-    reference: 'projects'
   }
 ];
 
@@ -55,3 +51,10 @@ export const contactLinks: Contact[] = [
     isGmail: true
   },
 ];
+
+export const profile: Profile = {
+  name: 'Sebastian Alcaraz',
+  role: 'Digital Marketing specialist',
+  description: `Business Marketing
+  Humber College Institute of Technology & Advanced Learning • Toronto`
+}

@@ -2,6 +2,7 @@ import * as React from "react";
 import * as styles from './index.module.scss';
 import {contactLinks, sectionsList} from '../../constants';
 import { Contact } from '../../interfaces/header';
+import { profile } from '../../constants/header';
 
 const HeaderComponent: React.FC = () => {
 
@@ -30,9 +31,9 @@ const HeaderComponent: React.FC = () => {
     <header className={`${styles.header}`}>
 
       <div>
-        <h1 className={styles.title}>Sebastian Alcaraz</h1>
-        <h3 className={styles.subtitle}>Digital Marketing specialist</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam tempora ipsa quae. Eaque optio hic suscipit animi autem eum. Placeat aliquam obcaecati eius dolorum rerum iure possimus vitae impedit?        </p>
+        <h1 className={styles.title}>{profile.name}</h1>
+        <h3 className={styles.subtitle}>{profile.role}</h3>
+        <p>{profile.description}</p>
       </div>
       
       <div className={styles.links}>

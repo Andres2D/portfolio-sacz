@@ -19,6 +19,15 @@
   .cardHeader {
     display: flex;
     justify-content: space-between;
+
+    .title {
+      margin-bottom: 0;
+    }
+  }
+
+  .place {
+    margin-top: 0;
+    color: $level3;
   }
 
   .skills {

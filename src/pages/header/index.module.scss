@@ -1,4 +1,5 @@
 @import '../../styles/sizes';
+@import '../../styles/colors';
 @import '../../styles/others';
 @import '../../styles/breakpoints';
 
@@ -37,10 +38,10 @@
     font-size: $medium;
     margin-left: $medium;
     gap: $regular;
-
+    
     .link {
       max-width: $maxWidth;
-
+      
       &:before {
         content: ' \279C   ';
       }
@@ -56,10 +57,17 @@
     display: flex;
     justify-content: space-evenly;
     color: white;
+    width: $regularPercentage;
+    margin: 0 auto;
 
     .icon {
       width: $average;
       cursor: pointer;
+      transition: all $transitionTime;
+
+      &:hover {
+        box-shadow: 0 $regular $average $lightShadow;
+      }
     }
   }
 }
