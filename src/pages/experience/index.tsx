@@ -18,8 +18,8 @@ const ExperienceComponent: React.FC = () => {
       initial='hidden'
       whileInView='show'
       viewport={{ once: true, amount: 0.15 }}
-      variants={{...staggerContainer(), ...textVariant} }>
-      <h3 className={styles.title}>Experience</h3>
+      variants={staggerContainer()}>
+      <motion.h3 variants={textVariant} className={styles.title}>Experience</motion.h3>
       { experienceMap }
     </motion.section>
   );
