@@ -1,6 +1,8 @@
 import * as React from "react";
+import { motion } from 'framer-motion';
 import { aboutParagraphs, keyWords } from "../../constants";
 import * as styles from './index.module.scss';
+import { staggerContainer, textVariant } from "../../utils/motion";
 
 const AboutComponent: React.FC = () => {
 
@@ -13,10 +15,16 @@ const AboutComponent: React.FC = () => {
   const aboutMap = aboutParagraphs.map(paragraph => <p dangerouslySetInnerHTML={{__html: keyWordsMap(paragraph)}} />);
 
   return (
-    <section id='about' className={styles.section}>
+    <motion.section 
+      id='about' 
+      className={styles.section}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ once: true, amount: 0.15 }}
+      variants={{...staggerContainer(), ...textVariant} }>
       <h3 className={styles.title}>About</h3>
       {aboutMap}
-    </section>
+    </motion.section>
   );
 };
 export default AboutComponent;

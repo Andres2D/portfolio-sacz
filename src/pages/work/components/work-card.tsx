@@ -1,12 +1,15 @@
 import * as React from "react";
+import { motion } from 'framer-motion';
 import { Work } from "../../../interfaces/work";
 import * as styles from './work-card.module.scss';
+import { fadeIn } from '../../../utils/motion';
 
 type Props = {
   work: Work;
+  index: number;
 }
 
-const WorkCardComponent: React.FC<Props> = ({work}) => {
+const WorkCardComponent: React.FC<Props> = ({work, index}) => {
 
   if(!work) {
     return (
@@ -21,7 +24,9 @@ const WorkCardComponent: React.FC<Props> = ({work}) => {
   } = work; 
 
   return (
-    <div className={styles.card}>
+    <motion.div 
+      className={styles.card}
+      variants={fadeIn('down', 'spring', index * 0.2, 1)}>
       <div className={styles.image}>
         <img src={image} alt={title} />
       </div>
@@ -32,7 +37,7 @@ const WorkCardComponent: React.FC<Props> = ({work}) => {
           <span className={styles.span}>{description}</span>
         </h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default WorkCardComponent;

@@ -1,12 +1,15 @@
 import * as React from "react";
+import { motion } from 'framer-motion';
 import * as styles from './card.module.scss';
 import { Experience } from '../../../interfaces/experience';
+import { fadeIn } from "../../../utils/motion";
 
 type Props = {
   experience: Experience;
+  index: number;
 }
 
-const CardComponent: React.FC<Props> = ({experience}) => {
+const CardComponent: React.FC<Props> = ({experience, index}) => {
 
   if(!experience) {
     return (
@@ -37,7 +40,10 @@ const CardComponent: React.FC<Props> = ({experience}) => {
   }
 
   return (
-    <div className={styles.card} onClick={() => navigateToPage(redirectUrl)}>
+    <motion.div 
+      className={styles.card} 
+      onClick={() => navigateToPage(redirectUrl)}
+      variants={fadeIn('down', 'spring', index * 0.2, 1)}>
       <header className={styles.cardHeader}>
         <h2 className={styles.title}>{jobTitle}</h2>
         <h4 className={styles.date}>{initialDate} - {finalDate ?? 'Present'}</h4>
@@ -49,7 +55,7 @@ const CardComponent: React.FC<Props> = ({experience}) => {
       <div className={styles.skills}>
         {tagsMap}
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default CardComponent;
