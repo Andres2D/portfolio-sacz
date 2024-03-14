@@ -1,14 +1,27 @@
 @import '../../styles/sizes';
 @import '../../styles/breakpoints';
+@import '../../styles/colors';
 
 .section {
   font-family: 'Oxygen';
   color: white;
   margin-top: $medium;
   min-height: $fullHeight;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .title {
     text-align: center;
+  }
+
+  .layer {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    filter: drop-shadow(
+      2px 2px 3px $level3RGBA
+    );
   }
 }
 

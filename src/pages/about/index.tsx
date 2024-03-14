@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { aboutParagraphs, keyWords } from "../../constants";
 import * as styles from './index.module.scss';
 import { staggerContainer, textVariant } from "../../utils/motion";
+import { marketingLayer } from "../../images";
 
 const AboutComponent: React.FC = () => {
 
@@ -24,6 +25,11 @@ const AboutComponent: React.FC = () => {
       variants={{...staggerContainer(), ...textVariant} }>
       <h3 className={styles.title}>About</h3>
       {aboutMap}
+      <img 
+        className={styles.layer}
+        src={marketingLayer} 
+        alt="marketing-layer" 
+      />
     </motion.section>
   );
 };
