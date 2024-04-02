@@ -7,7 +7,7 @@ import { workList } from '../../constants/work';
 import WorkCardComponent from "./components/work-card";
 import * as styles from './index.module.scss';
 import { textVariant, staggerContainer } from '../../utils/motion';
-import { hr_v } from '../../videos';
+import WorkSamplesModalComponent from './components/work-samples-modal';
 
 const WorkComponent: React.FC = () => {
 
@@ -41,20 +41,18 @@ const WorkComponent: React.FC = () => {
       <Modal 
         open={modalOpen} 
         onClose={onCloseModal}
+        center
+        styles={{
+          modal: {
+            textAlign: 'center',
+            backgroundColor: '#222f3e'
+          },
+          closeIcon: {
+            fill: 'white'
+          }
+        }}
       >
-        <section className={styles.modalSection}>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa porro eveniet blanditiis sed et eos alias dignissimos eum. Sunt sint architecto perferendis natus, assumenda unde corrupti fuga. Voluptates, ratione alias?</p>
-          {/* <iframe
-            src={hr_v}
-            className={styles.videoFrame}
-            title='sample'
-            // allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
-            frameBorder="0"
-            width='230px'
-            height='500px'
-            allowFullScreen
-          />*/}
-        </section>
+        <WorkSamplesModalComponent />
       </Modal>
     </motion.div>
   );

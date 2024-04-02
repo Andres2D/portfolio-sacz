@@ -27,7 +27,7 @@ export const workList: Work[] = [
   },
   {
     id: 'w4',
-    title: 'Content Samples',
+    title: 'Content Creation',
     description: 'Check my work',
     image: contentSamples,
     modalId: 'content-examples'
