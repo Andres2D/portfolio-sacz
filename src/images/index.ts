@@ -9,6 +9,7 @@ import marketingLayer from './svg/marketing-intro.svg';
 import marketing from './png/marketing.png';
 import music from './png/music.png';
 import bartender from './png/bartender.png';
+import contentSamples from './png/content-samples.png';
 
 export {
   facebook,
@@ -20,5 +21,6 @@ export {
   marketing,
   music,
   bartender,
-  marketingLayer
+  marketingLayer,
+  contentSamples
 };

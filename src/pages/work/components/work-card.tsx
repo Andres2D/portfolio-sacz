@@ -7,9 +7,10 @@ import { fadeIn } from '../../../utils/motion';
 type Props = {
   work: Work;
   index: number;
+  onClick: () => void;
 }
 
-const WorkCardComponent: React.FC<Props> = ({work, index}) => {
+const WorkCardComponent: React.FC<Props> = ({work, index, onClick}) => {
 
   if(!work) {
     return (
@@ -26,7 +27,9 @@ const WorkCardComponent: React.FC<Props> = ({work, index}) => {
   return (
     <motion.div 
       className={styles.card}
-      variants={fadeIn('down', 'spring', index * 0.2, 1)}>
+      variants={fadeIn('down', 'spring', index * 0.2, 1)}
+      onClick={onClick}
+    >
       <div className={styles.image}>
         <img src={image} alt={title} />
       </div>

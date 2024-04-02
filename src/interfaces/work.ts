@@ -4,4 +4,5 @@ export interface Work {
   image: string;
   description: string;
   url?: string;
+  modalId?: string;
 }
