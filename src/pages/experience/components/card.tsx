@@ -29,7 +29,7 @@ const CardComponent: React.FC<Props> = ({experience, index}) => {
 
   const tagsMap = tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>);
 
-  const descriptionMap = description.map(item => <li>{item}</li>);
+  const descriptionMap = description.map((item, index) => <li key={index}>{item}</li>);
 
   const navigateToPage = (url?: string)   => {
     if(!url || url?.trim() == '') {

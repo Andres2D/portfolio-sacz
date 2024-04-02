@@ -13,11 +13,16 @@ const AboutComponent: React.FC = () => {
     return mappedList.join(' ');
   }
 
-  const aboutMap = aboutParagraphs.map(paragraph => <p dangerouslySetInnerHTML={{__html: keyWordsMap(paragraph)}} />);
+  const aboutMap = aboutParagraphs.map((paragraph, index) => 
+    <p 
+      dangerouslySetInnerHTML={{__html: keyWordsMap(paragraph)}} 
+      key={index}
+    />
+  );
 
   return (
     <motion.section 
-      id='about' 
+      id='about'
       className={styles.section}
       initial='hidden'
       whileInView='show'
