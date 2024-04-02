@@ -18,7 +18,7 @@ const WorkComponent: React.FC = () => {
       key={work.id} 
       index={index} 
       work={work}
-      onClick={() => setModalOpen(true)}
+      onClick={() => work.modalId ? setModalOpen(true) : null}
     />
   ));
 

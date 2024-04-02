@@ -7,7 +7,8 @@ const WorkSamplesModalComponent: React.FC = () => {
     <video 
       key={id}
       controls 
-      width={width} 
+      width={width}
+      height="359px" 
       style={{ 
         borderRadius: '5px',
         border: '2px solid white'
@@ -27,7 +28,9 @@ const WorkSamplesModalComponent: React.FC = () => {
       style={{
         cursor: 'pointer',
         borderRadius: '5px',
-        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px'
+        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+        maxWidth: width,
+        width: '100%'
       }}
     />
   );
