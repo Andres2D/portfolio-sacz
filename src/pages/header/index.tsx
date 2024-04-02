@@ -11,6 +11,7 @@ const HeaderComponent: React.FC = () => {
 
   const linksMap = sectionsList.map((section, index) => 
     <motion.a 
+      key={section.label}
       className={styles.link} 
       href={`#${section.reference}`}
       variants={fadeIn('left', 'spring', index * 0.2, 1)}>
@@ -19,6 +20,7 @@ const HeaderComponent: React.FC = () => {
   );
   const contactMap = contactLinks.map((contact, index) => 
     <motion.img 
+      key={contact.label}
       className={styles.icon}
       src={contact.image}
       alt={contact.label}

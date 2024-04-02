@@ -2,7 +2,8 @@ import { Work } from "../interfaces/work";
 import {
   bartender,
   marketing,
-  music
+  music,
+  contentSamples
 } from '../images';
 
 export const workList: Work[] = [
@@ -23,5 +24,12 @@ export const workList: Work[] = [
     title: 'Music',
     description: 'Beats, Drum, Bass',
     image: music
+  },
+  {
+    id: 'w4',
+    title: 'Content Creation',
+    description: 'Check my work',
+    image: contentSamples,
+    modalId: 'content-examples'
   }
 ];

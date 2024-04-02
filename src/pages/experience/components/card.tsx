@@ -29,7 +29,7 @@ const CardComponent: React.FC<Props> = ({experience, index}) => {
 
   const tagsMap = tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>);
 
-  const descriptionMap = description.map(item => <li>{item}</li>);
+  const descriptionMap = description.map((item, index) => <li key={index}>{item}</li>);
 
   const navigateToPage = (url?: string)   => {
     if(!url || url?.trim() == '') {
@@ -46,10 +46,10 @@ const CardComponent: React.FC<Props> = ({experience, index}) => {
       variants={fadeIn('down', 'spring', index * 0.2, 1)}>
       <header className={styles.cardHeader}>
         <h2 className={styles.title}>{jobTitle}</h2>
-        <h4 className={styles.date}>{initialDate} - {finalDate ?? 'Present'}</h4>
+        <h4>{initialDate} - {finalDate ?? 'Present'}</h4>
       </header>
       <p className={styles.place}>{place}</p>
-      <ul className={styles.description}>
+      <ul>
         {descriptionMap}
       </ul>
       <div className={styles.skills}>

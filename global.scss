@@ -1,4 +1,5 @@
 @import './src/styles/colors';
+@import './src/styles/sizes';
 
 html{
   scroll-behavior: smooth;
@@ -12,4 +13,10 @@ body {
 
 p {
   line-height: 25px;
+}
+
+.react-responsive-modal-modal {
+  border-radius: $small;
+  font-family: "Oxygen";
+  color: white;
 }
