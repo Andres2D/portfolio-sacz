@@ -8,7 +8,8 @@ const WorkSamplesModalComponent: React.FC = () => {
       key={id}
       controls 
       width={width}
-      height="359px" 
+      height="359px"
+      playsInline 
       style={{ 
         borderRadius: '5px',
         border: '2px solid white'
